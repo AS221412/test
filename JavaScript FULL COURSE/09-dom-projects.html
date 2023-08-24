@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>DOM Projects</title>
+
+</head>
+
+<body>
+
+    <p>Youtube Subscribe Button</p>
+
+    <button onclick="
+    subButton();
+    " class="js-sub">Subscribe</button>
+   
+   
+   <p>Amazon Shipping Calculator</p>
+
+   <input  placeholder="Cost of Order" class="js-cost-input">
+   <button onclick="calcTotal();"  >Calculate</button>
+   
+   <script>  
+
+    function calcTotal(){ 
+        const inputElement = document.querySelector('.js-cost-input');        
+        let cost = inputElement.value;
+
+        if (cost < 40 ){
+                cost = cost + 10;
+            }
+
+       
+    }
+
+    function subButton(){
+            const ButtonElement =  document.querySelector('.js-sub');
+
+        if (ButtonElement.innerHTML === 'Subscribe'){
+            ButtonElement.innerHTML = 'Subscribed';
+        } else{
+            ButtonElement.innerHTML = 'Subscribe';
+    }
+    }
+    </script>
+
+
+</body>
+
+
+</html>
